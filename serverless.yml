@@ -21,3 +21,5 @@ functions:
           path: /cube
           method: ANY
           cors: true
+
+
