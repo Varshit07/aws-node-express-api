@@ -22,5 +22,4 @@ functions:
           method: ANY
           cors: true
 
-plugins:
-  - serverless-offline
+
