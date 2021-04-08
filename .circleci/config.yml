@@ -27,7 +27,7 @@ jobs:
           command: serverless deploy -v
 
 workflows:
-  test_and_deploy:
+  test_and_or_deploy:
     jobs:
       - test
       - deploy:
