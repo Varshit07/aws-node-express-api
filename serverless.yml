@@ -7,7 +7,6 @@ provider:
   name: aws
   runtime: nodejs12.x
   lambdaHashingVersion: '20201221'
-  region: us-east-1
 
 functions:
   api:
@@ -22,6 +21,3 @@ functions:
           path: /cube
           method: ANY
           cors: true
-
-plugins:
-  - serverless-offline
