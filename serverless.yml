@@ -2,7 +2,6 @@ service: aws-node-express-api
 
 frameworkVersion: '2'
 
-
 provider:
   name: aws
   runtime: nodejs12.x
@@ -16,7 +15,6 @@ functions:
           path: /
           method: ANY
           cors: true
-  
       - http:
           path: /cube
           method: ANY

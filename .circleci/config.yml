@@ -25,9 +25,6 @@ jobs:
       - run:
           name: Perform Deployment
           command: serverless deploy -v
-          
-
-          
 
 workflows:
   test_and_deploy:
