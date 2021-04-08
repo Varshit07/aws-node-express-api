@@ -21,3 +21,6 @@ functions:
           path: /cube
           method: ANY
           cors: true
+
+plugins:
+  - serverless-offline
