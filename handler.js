@@ -1,8 +1,7 @@
 const serverless = require("serverless-http");
 const express = require("express");
+const cube = require('./cube');
 const app = express();
-
-const cubeNumber = (number) => number * number * number;
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
@@ -14,7 +13,7 @@ app.get("/cube", (req, res, next) => {
   console.log(isNaN(parseInt((req.query.number))));
   if(!isNaN(parseInt((req.query.number)))) {
     return res.status(200).json({
-      cube: cubeNumber(req.query.number),
+      cube: cube(req.query.number),
     });
   }
 
