@@ -10,15 +10,19 @@ authorName: 'Serverless, inc.'
 authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
 -->
 
-# Serverless Framework Node Express API on AWS
+# Serverless Framework Node Express API on AWS with CircleCI
 
-This template demonstrates how to develop and deploy a simple Node Express API service running on AWS Lambda using the traditional Serverless Framework.
+This template demonstrates how to develop and deploy a simple Node Express API service running on AWS Lambda and CircleCI. The CircleCI config runs `test` job for all changes to the repository and runs `deploy` job only for `main` beanch,
 
 ## Anatomy of the template
 
 This template configures a single function, `api`, which is responsible for handling all incoming requests thanks to configured `http` events. To learn more about `http` event configuration options, please refer to [http event docs](https://www.serverless.com/framework/docs/providers/aws/events/apigateway/). As the events are configured in a way to accept all incoming requests, `express` framework is responsible for routing and handling requests internally. Implementation takes advantage of `serverless-http` package, which allows you to wrap existing `express` applications. To learn more about `serverless-http`, please refer to corresponding [GitHub repository](https://github.com/dougmoscrop/serverless-http).
 
 ## Usage
+
+### CircleCI
+
+Add the AWS Config Environment Variables in a exisiting/new context on CircleCI. Ensure that context name on CircleCI and context in `./circleci/config.yml` matches 
 
 ### Deployment
 
