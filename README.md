@@ -93,32 +93,21 @@ curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/dev/
 Which should result in the following response:
 
 ```
-{"message":"Hello from root!"}
+{"message":"Hello, World!!!"}
 ```
 
-Calling the `/hello` path with:
+Calling the `/cube` path with:
 
 ```bash
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/dev/hello
+curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/dev/cube?number=54
 ```
 
 Should result in the following response:
 
 ```bash
-{"message":"Hello from path!"}
+{"cube":157464}
 ```
 
-If you try to invoke a path or method that does not have a configured handler, e.g. with:
-
-```bash
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/dev/nonexistent
-```
-
-You should receive the following response:
-
-```bash
-{"error":"Not Found"}
-```
 
 ### Local development
 
